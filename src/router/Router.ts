@@ -1,55 +1,65 @@
 import { PageElement } from "../element";
 
-class Router {
+class Router{
 
-    private routes: Array<PageElement> = [];
-    private page: PageElement | null = null;
-    private _url: string = "";
+    private routes: Map<string, PageElement> = new Map();
 
     constructor() {
-        console.log("Router created");
-        this._url = window.location.origin + "/public/";
-        // window.addEventListener("load", (event) => {
-        //     console.log("page is fully loaded");
-        //     alert("page is fully loaded");
-        // });
-
-        // window.onload = () => {
-        //     console.log("window.onload ");
-        //     alert("window.onload");
-        // }
-
-
+        window.onload = () => this.loadPage(window.location.pathname, null);
     }
 
-    public addRoute(route: PageElement) {
-        this.routes.push(route);
+    private loadPage(pathname: string = window.location.pathname, title: string | null) {
+        const page = this.routes.get(pathname);  
+        if (page != null)
+        {   
+            page.init();
+            if (title != null)
+                window.document.title = title;
+            else
+            {    
+                title = pathname.substring(pathname.indexOf('/') + 1, pathname.length)
+                window.document.title = page.title !=  undefined ? page.title : title != undefined ? title : "home"
+            }
+        }
+        else
+            this.pageNotFound()
     }
 
-    public removeRoute(route: PageElement) {
-        this.routes = this.routes.filter((r) => r !== route);
+    public put(pathname: string, route: PageElement) {
+        route.pathname = pathname;
+        this.routes.set(pathname, route);
     }
 
-    public loadRoute(route: PageElement) {
-        this.page = route;
-        // const opened = window.open("teste2.html") as Window;
-        // opened.document.write("Your HTML here");
-        // window.location.assign(this._url + "teste" + ".html")
-        var xhr = new XMLHttpRequest();
-
-        try {
-            // access something
-         window.location.assign(window.location.origin + "/public/teste2" + ".html")
-       
-            //window.document.write("Your HTML here");
-          } catch (ex) {
-            // oops. Exception object is in "ex"
-            console.log("error: " + ex);
-          }
-            
-       
+    public getPate(pathname: string): PageElement | undefined | null{
+        return this.routes.get(pathname);
     }
 
+    public remove(route: PageElement) {
+        this.routes.delete(route.pathname);
+    }
+
+    public load(pathname: string | PageElement) {
+        if (typeof pathname == "string")
+            window.location.assign(pathname);
+        else if (pathname != null)
+            this.loadPage(pathname.pathname, null)
+    }
+
+
+
+    private pageNotFound(): void {
+        const body = document.createElement("body") as HTMLBodyElement;
+        body.style.backgroundColor = "#404853";
+        body.style.width = "100%";
+        body.style.height = "100%";
+        body.style.overflow = "hidden";
+        body.style.position = "fixed";
+        body.innerHTML = "<div style='text-align: center;'>"
+            + "<h1 style='text-shadow: 0 3px 0px $color-base, 0 6px 0px #333; color: #f54f59; font-size: 6em; font-weight: 700; line-height: 0.6em;'>404</h1>" +
+            "<h1 style='text-shadow: 0 3px 0px $color-base, 0 6px 0px #333; color: #f54f59; font-size: 10; font-weight: 15; line-height: 0.6em;'>Page not found</h1>"
+            + "</div>"
+        document.body = body;
+    }
 
 
 }

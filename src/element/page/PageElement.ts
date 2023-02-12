@@ -1,18 +1,19 @@
 import Element from "../base/Element";
 
 
-export default  class PageElement extends Element {
+export default class PageElement extends Element {
 
-    page: any;
 
-    constructor(page: (body: PageElement) => void) {
+    pathname: string = "";
+    title: string = "";
+
+    constructor(title: string = "") {
         super("body", 0, 0);
-        this.page = page;
+        this.title = title;
     }
 
 
     public init() {
         document.body = this.element;
-        this.page(this);
     }
 }

@@ -34,8 +34,10 @@ export default class Element {
 
     appendChild(...childs: Element[]) {
         childs.forEach((child) => {
-            this.children.push(child);
-            this.element.appendChild(child.element);
+            if (child != this) {
+                this.children.push(child);
+                this.element.appendChild(child.element);
+            }
         })
     }
 
