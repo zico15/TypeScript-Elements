@@ -6,6 +6,7 @@ class Router{
 
     constructor() {
         window.onload = () => this.loadPage(window.location.pathname, null);
+        // window.onunload = () => alert("unload");
     }
 
     private loadPage(pathname: string = window.location.pathname, title: string | null) {

@@ -1,8 +1,11 @@
+import { Ref } from "../../factory/Ref";
+import  CSSStyle from "./CSSStyle"
 
 export default class Element {
 
     private node: any = null;
     private children: Array<Element> = [];
+    private _style:CSSStyle | null = null;
     private _x: number = 0;
     private _y: number = 0;
     public name: string = "";
@@ -13,6 +16,7 @@ export default class Element {
             this.element.style.position = "absolute";
             this.x = x
             this.y = y
+            this._style = new CSSStyle(this.element.style);
         }
     }
 
@@ -29,8 +33,8 @@ export default class Element {
         template.children[0].remove();
         if (parant != null)
             parant.appendChild(this.element);
+        this._style = new CSSStyle(this.element.style);
     }
-
 
     appendChild(...childs: Element[]) {
         childs.forEach((child) => {
@@ -52,9 +56,7 @@ export default class Element {
         return this.children;
     }
 
-    innerHTML() {
-        return this.element.innerHTML;
-    }
+    
 
     setStyle(style: string) {
         this.element.setAttribute("style", style);
@@ -70,12 +72,37 @@ export default class Element {
         this.element.setAttribute("style", String(this.element.getAttribute("style")).replace(style, ""));
     }
 
+    public innerHTML(...values: any[]): string {
+        if (values.length > 0) {
+            let text = ""
+            values.forEach((value) => {
+                if (value instanceof Ref) {
+                    value.on(() => {
+                        this.element.innerHTML = values.map((v) => v instanceof Ref ? v.value : v).join("");
+                    } )
+                    text += value.value;
+                }
+                else
+                    text += value;
+            })
+            this.element.innerHTML = text;
+        }
+        return this.element.innerHTML;
+    }
 
-    public get element(): HTMLElement {
+    public addEventListener(event: keyof HTMLElementEventMap, callback: (this: GlobalEventHandlers, ev: Event) => any, options?: boolean | AddEventListenerOptions): void {
+        this.element.addEventListener(event, callback, options);
+    }
+  
+    public get style(): CSSStyle {
+        return this._style!;
+    }
+
+    protected get element(): HTMLElement {
         return this.node;
     }
 
-    public set element(v: HTMLElement) {
+    protected set element(v: HTMLElement) {
         this.node = v;
     }
 
