@@ -38,4 +38,33 @@ export default class AnchorPane extends Element {
             child.style.right = value;
     }
 
+    public static setCenterAnchor(child: Element, value: number | string | Ref<any>) {
+        if (typeof value == "number")
+            child.style.margin = "auto";
+        else
+            child.style.margin = "auto";
+    }
+
+    public static setCenterXAnchor(child: Element, value: number | string | Ref<any>) {
+        if (typeof value == "number")
+            child.style.marginLeft = "auto";
+        else
+            child.style.marginLeft = "auto";
+    }
+
+    public static setCenterYAnchor(child: Element, value: number | string | Ref<any>) {
+        if (typeof value == "number")
+            child.style.marginTop = "auto";
+        else
+            child.style.marginTop = "auto";
+    }
+
+    public static setAnchor(child: Element, top: number | string | Ref<any>, right: number | string | Ref<any>, bottom: number | string | Ref<any>, left: number | string | Ref<any>) {
+        AnchorPane.setTopAnchor(child, top);
+        AnchorPane.setRightAnchor(child, right);
+        AnchorPane.setBottomAnchor(child, bottom);
+        AnchorPane.setLeftAnchor(child, left);
+    }
+
+
 }

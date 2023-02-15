@@ -6,6 +6,8 @@ import DivElement from "./layers/DivElement";
 import BodyElement from "./layers/BodyElement";
 import PageElement from "./page/PageElement";
 import ButtonElement from "./action/ButtonElement";
+import InputElement from "./action/InputElement";
+import LabelElement from "./text/LabelElement";
 
 // Layer Elements
 import AnchorPane from "./layers/AnchorPane";
@@ -25,5 +27,7 @@ export {
     ButtonElement,
     AnchorPane,
     Pane,
-    SvgElement
+    SvgElement,
+    InputElement,
+    LabelElement
 }

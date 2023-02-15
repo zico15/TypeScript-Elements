@@ -19,6 +19,9 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true, 
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": "./src",
     "paths": {
       "@components/*": [

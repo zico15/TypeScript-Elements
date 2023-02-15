@@ -5,6 +5,8 @@ type callback<T> = (value: T) => void
 export class Ref<T> {
 
     private calllbacks: callback<T>[] = [];
+    private static _id = 100000;
+    private static refs = new Map<string, Ref<any>>();
 
 
     public static ref<T>(value: T): Ref<T> {
@@ -17,6 +19,7 @@ export class Ref<T> {
     public constructor(value: T) {
         this._value = value;
         this._value_origen = value;
+        Ref._id++;
     }
 
 
@@ -42,6 +45,19 @@ export class Ref<T> {
         this.emit();
     }
 
+    public toString = () : string => {
+        return `{Ref{${Ref._id}}Ref}`;
+    }
+
+    public static getRef(id: string) {
+        return Ref.refs.get(id);
+    }
+
+}
+
+export interface refType {
+    get ref(): Ref<any>;
+    set ref(value: Ref<any>);
 }
 
 export function ref<T>(value: T): Ref<T> {

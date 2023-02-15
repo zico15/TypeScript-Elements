@@ -1,11 +1,11 @@
 import { Ref } from "../../factory/Ref";
-import  CSSStyle from "./CSSStyle"
+import CSSStyle from "./CSSStyle"
 
-export default class Element {
+export default class Element{
 
     private node: any = null;
     private children: Array<Element> = [];
-    private _style:CSSStyle | null = null;
+    private _style: CSSStyle | null = null;
     private _x: number = 0;
     private _y: number = 0;
     public name: string = "";
@@ -13,14 +13,13 @@ export default class Element {
     constructor(type: string | null, x: number | string = "0px", y: number | string = "0px") {
         if (type != null) {
             this.node = document.createElement(type);
-            this.element.style.position = "absolute";
             this.x = x
             this.y = y
             this._style = new CSSStyle(this.element.style);
         }
     }
 
-    protected async createElement(type: string, inHtml: string, x: number | string = "0px", y: number | string = "0px") {
+    protected async createElement(type: string, inHtml: string) {
         const template = document.createElement('div');
         const parant = this.element.parentElement;
         if (parant != null)
@@ -56,7 +55,29 @@ export default class Element {
         return this.children;
     }
 
-    
+    setAttribute(name: string, value: string) {
+        this.element.setAttribute(name, value);
+    }
+
+    /** 
+     * use addLink instead
+     *  stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+     * ** */
+    addLink(rel:string ,link: string) {
+        this.element.innerHTML += `<link rel="${rel}" href="${link}"/>`;    
+    }
+
+    addStyleLink(link: string) {
+        this.element.innerHTML += `<link rel="stylesheet" href="${link}"/>`;
+    }
+
+    addScriptLink(link: string) {
+        this.element.innerHTML += `<script src="${link}"></script>`;
+    }
+
+    getAttribute(name: string): string | null {
+        return this.element.getAttribute(name);
+    }
 
     setStyle(style: string) {
         this.element.setAttribute("style", style);
@@ -93,7 +114,19 @@ export default class Element {
     public addEventListener(event: keyof HTMLElementEventMap, callback: (this: GlobalEventHandlers, ev: Event) => any, options?: boolean | AddEventListenerOptions): void {
         this.element.addEventListener(event, callback, options);
     }
-  
+
+    public removeEventListener(event: keyof HTMLElementEventMap, callback: (this: GlobalEventHandlers, ev: Event) => any, options?: boolean | AddEventListenerOptions): void {
+        this.element.removeEventListener(event, callback, options);
+    }
+
+    public set className (value: string) {
+        this.element.className = value;
+    }
+
+    public get className (): string {
+        return this.element.className;
+    }
+
     public get style(): CSSStyle {
         return this._style!;
     }
@@ -161,5 +194,3 @@ export default class Element {
         this.element.onmouseenter = a;
     }
 }
-
-
