@@ -1,4 +1,4 @@
-import { Ref } from "../../factory/Ref";
+import { Ref, Reference } from "../../factory/Ref";
 
 export default class CSSStyle {
 
@@ -13,12 +13,14 @@ export default class CSSStyle {
     }
 
     set alignContent(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
+
             value.on((v) => this._style.alignContent = v)
             this._style.alignContent = value.value;
         }
         else
-            this._style.alignContent = value;
+            this._style.alignContent = value.valueOf();
     }
 
     get alignItems(): string {
@@ -26,12 +28,13 @@ export default class CSSStyle {
     }
 
     set alignItems(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.alignItems = v)
             this._style.alignItems = value.value;
         }
         else
-            this._style.alignItems = value;
+            this._style.alignItems = value.valueOf();
     }
 
     get alignSelf(): string {
@@ -39,12 +42,13 @@ export default class CSSStyle {
     }
 
     set alignSelf(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.alignSelf = v)
             this._style.alignSelf = value.value;
         }
         else
-            this._style.alignSelf = value;
+            this._style.alignSelf = value.valueOf();
     }
 
     get alignmentBaseline(): string {
@@ -52,12 +56,13 @@ export default class CSSStyle {
     }
 
     set alignmentBaseline(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.alignmentBaseline = v)
             this._style.alignmentBaseline = value.value;
         }
         else
-            this._style.alignmentBaseline = value;
+            this._style.alignmentBaseline = value.valueOf();
     }
 
     get all(): string {
@@ -65,12 +70,13 @@ export default class CSSStyle {
     }
 
     set all(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.all = v)
             this._style.all = value.value;
         }
         else
-            this._style.all = value;
+            this._style.all = value.valueOf();
     }
 
     get animation(): string {
@@ -78,12 +84,13 @@ export default class CSSStyle {
     }
 
     set animation(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.animation = v)
             this._style.animation = value.value;
         }
         else
-            this._style.animation = value;
+            this._style.animation = value.valueOf();
     }
 
     get animationDelay(): string {
@@ -91,12 +98,13 @@ export default class CSSStyle {
     }
 
     set animationDelay(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.animationDelay = v)
             this._style.animationDelay = value.value;
         }
         else
-            this._style.animationDelay = value;
+            this._style.animationDelay = value.valueOf();
     }
 
     get animationDirection(): string {
@@ -104,12 +112,13 @@ export default class CSSStyle {
     }
 
     set animationDirection(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.animationDirection = v)
             this._style.animationDirection = value.value;
         }
         else
-            this._style.animationDirection = value;
+            this._style.animationDirection = value.valueOf();
     }
 
     get animationDuration(): string {
@@ -117,12 +126,13 @@ export default class CSSStyle {
     }
 
     set animationDuration(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.animationDuration = v)
             this._style.animationDuration = value.value;
         }
         else
-            this._style.animationDuration = value;
+            this._style.animationDuration = value.valueOf();
     }
 
     get animationFillMode(): string {
@@ -130,12 +140,13 @@ export default class CSSStyle {
     }
 
     set animationFillMode(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.animationFillMode = v)
             this._style.animationFillMode = value.value;
         }
         else
-            this._style.animationFillMode = value;
+            this._style.animationFillMode = value.valueOf();
     }
 
     get animationIterationCount(): string {
@@ -143,12 +154,13 @@ export default class CSSStyle {
     }
 
     set animationIterationCount(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.animationIterationCount = v)
             this._style.animationIterationCount = value.value;
         }
         else
-            this._style.animationIterationCount = value;
+            this._style.animationIterationCount = value.valueOf();
     }
 
     get animationName(): string {
@@ -156,12 +168,13 @@ export default class CSSStyle {
     }
 
     set animationName(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.animationName = v)
             this._style.animationName = value.value;
         }
         else
-            this._style.animationName = value;
+            this._style.animationName = value.valueOf();
     }
 
     get animationPlayState(): string {
@@ -169,12 +182,13 @@ export default class CSSStyle {
     }
 
     set animationPlayState(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.animationPlayState = v)
             this._style.animationPlayState = value.value;
         }
         else
-            this._style.animationPlayState = value;
+            this._style.animationPlayState = value.valueOf();
     }
 
     get animationTimingFunction(): string {
@@ -182,12 +196,13 @@ export default class CSSStyle {
     }
 
     set animationTimingFunction(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.animationTimingFunction = v)
             this._style.animationTimingFunction = value.value;
         }
         else
-            this._style.animationTimingFunction = value;
+            this._style.animationTimingFunction = value.valueOf();
     }
 
     get backfaceVisibility(): string {
@@ -196,12 +211,13 @@ export default class CSSStyle {
 
     set backfaceVisibility(value: string | Ref<any>) {
 
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backfaceVisibility = v)
             this._style.backfaceVisibility = value.value;
         }
         else
-            this._style.backfaceVisibility = value;
+            this._style.backfaceVisibility = value.valueOf();
     }
 
     get background(): string {
@@ -210,12 +226,13 @@ export default class CSSStyle {
 
     set background(value: string | Ref<any>) {
 
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.background = v)
             this._style.background = value.value;
         }
         else
-            this._style.background = value;
+            this._style.background = value.valueOf();
     }
 
     get backgroundAttachment(): string {
@@ -224,12 +241,13 @@ export default class CSSStyle {
 
     set backgroundAttachment(value: string | Ref<any>) {
 
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundAttachment = v)
             this._style.backgroundAttachment = value.value;
         }
         else
-            this._style.backgroundAttachment = value;
+            this._style.backgroundAttachment = value.valueOf();
     }
 
     get backgroundBlendMode(): string {
@@ -238,12 +256,13 @@ export default class CSSStyle {
 
     set backgroundBlendMode(value: string | Ref<any>) {
 
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundBlendMode = v)
             this._style.backgroundBlendMode = value.value;
         }
         else
-            this._style.backgroundBlendMode = value;
+            this._style.backgroundBlendMode = value.valueOf();
     }
 
     get backgroundClip(): string {
@@ -252,12 +271,13 @@ export default class CSSStyle {
 
     set backgroundClip(value: string | Ref<any>) {
 
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundClip = v)
             this._style.backgroundClip = value.value;
         }
         else
-            this._style.backgroundClip = value;
+            this._style.backgroundClip = value.valueOf();
     }
 
     get backgroundColor(): string {
@@ -265,12 +285,13 @@ export default class CSSStyle {
     }
 
     set backgroundColor(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundColor = v)
             this._style.backgroundColor = value.value;
         }
         else
-            this._style.backgroundColor = value;
+            this._style.backgroundColor = value.valueOf();
     }
 
     get backgroundImage(): string {
@@ -278,12 +299,13 @@ export default class CSSStyle {
     }
 
     set backgroundImage(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundImage = v)
             this._style.backgroundImage = value.value;
         }
         else
-            this._style.backgroundImage = value;
+            this._style.backgroundImage = value.valueOf();
     }
 
     get backgroundOrigin(): string {
@@ -291,12 +313,13 @@ export default class CSSStyle {
     }
 
     set backgroundOrigin(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundOrigin = v)
             this._style.backgroundOrigin = value.value;
         }
         else
-            this._style.backgroundOrigin = value;
+            this._style.backgroundOrigin = value.valueOf();
     }
 
     get backgroundPosition(): string {
@@ -306,12 +329,13 @@ export default class CSSStyle {
 
     set backgroundPosition(value: string | Ref<any>) {
 
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundPosition = v)
             this._style.backgroundPosition = value.value;
         }
         else
-            this._style.backgroundPosition = value;
+            this._style.backgroundPosition = value.valueOf();
     }
 
     get backgroundPositionX(): string {
@@ -319,12 +343,13 @@ export default class CSSStyle {
     }
 
     set backgroundPositionX(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundPositionX = v)
             this._style.backgroundPositionX = value.value;
         }
         else
-            this._style.backgroundPositionX = value;
+            this._style.backgroundPositionX = value.valueOf();
     }
 
     get backgroundPositionY(): string {
@@ -333,12 +358,13 @@ export default class CSSStyle {
 
 
     set backgroundPositionY(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundPositionY = v)
             this._style.backgroundPositionY = value.value;
         }
         else
-            this._style.backgroundPositionY = value;
+            this._style.backgroundPositionY = value.valueOf();
     }
 
     get backgroundRepeat(): string {
@@ -346,12 +372,13 @@ export default class CSSStyle {
     }
 
     set backgroundRepeat(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundRepeat = v)
             this._style.backgroundRepeat = value.value;
         }
         else
-            this._style.backgroundRepeat = value;
+            this._style.backgroundRepeat = value.valueOf();
     }
 
     get backgroundSize(): string {
@@ -360,12 +387,13 @@ export default class CSSStyle {
 
 
     set backgroundSize(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.backgroundSize = v)
             this._style.backgroundSize = value.value;
         }
         else
-            this._style.backgroundSize = value;
+            this._style.backgroundSize = value.valueOf();
     }
 
     get border(): string {
@@ -373,12 +401,13 @@ export default class CSSStyle {
     }
 
     set border(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.border = v)
             this._style.border = value.value;
         }
         else
-            this._style.border = value;
+            this._style.border = value.valueOf();
     }
 
     get borderBottom(): string {
@@ -386,12 +415,13 @@ export default class CSSStyle {
     }
 
     set borderBottom(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderBottom = v)
             this._style.borderBottom = value.value;
         }
         else
-            this._style.borderBottom = value;
+            this._style.borderBottom = value.valueOf();
     }
 
 
@@ -400,12 +430,13 @@ export default class CSSStyle {
     }
 
     set borderBottomColor(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderBottomColor = v)
             this._style.borderBottomColor = value.value;
         }
         else
-            this._style.borderBottomColor = value;
+            this._style.borderBottomColor = value.valueOf();
     }
 
     get borderBottomLeftRadius(): string {
@@ -413,12 +444,13 @@ export default class CSSStyle {
     }
 
     set borderBottomLeftRadius(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderBottomLeftRadius = v)
             this._style.borderBottomLeftRadius = value.value;
         }
         else
-            this._style.borderBottomLeftRadius = value;
+            this._style.borderBottomLeftRadius = value.valueOf();
     }
 
     get borderBottomRightRadius(): string {
@@ -426,12 +458,13 @@ export default class CSSStyle {
     }
 
     set borderBottomRightRadius(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderBottomRightRadius = v)
             this._style.borderBottomRightRadius = value.value;
         }
         else
-            this._style.borderBottomRightRadius = value;
+            this._style.borderBottomRightRadius = value.valueOf();
     }
 
     get borderBottomStyle(): string {
@@ -439,12 +472,13 @@ export default class CSSStyle {
     }
 
     set borderBottomStyle(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderBottomStyle = v)
             this._style.borderBottomStyle = value.value;
         }
         else
-            this._style.borderBottomStyle = value;
+            this._style.borderBottomStyle = value.valueOf();
     }
 
     get borderBottomWidth(): string {
@@ -453,12 +487,13 @@ export default class CSSStyle {
 
     set borderBottomWidth(value: string | Ref<any>) {
 
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderBottomWidth = v)
             this._style.borderBottomWidth = value.value;
         }
         else
-            this._style.borderBottomWidth = value;
+            this._style.borderBottomWidth = value.valueOf();
     }
 
     get borderCollapse(): string {
@@ -466,12 +501,13 @@ export default class CSSStyle {
     }
 
     set borderCollapse(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderCollapse = v)
             this._style.borderCollapse = value.value;
         }
         else
-            this._style.borderCollapse = value;
+            this._style.borderCollapse = value.valueOf();
     }
 
     get borderColor(): string {
@@ -480,12 +516,13 @@ export default class CSSStyle {
 
     set borderColor(value: string | Ref<any>) {
 
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderColor = v)
             this._style.borderColor = value.value;
         }
         else
-            this._style.borderColor = value;
+            this._style.borderColor = value.valueOf();
     }
 
     get borderImage(): string {
@@ -495,12 +532,13 @@ export default class CSSStyle {
 
     set borderImage(value: string | Ref<any>) {
 
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderImage = v)
             this._style.borderImage = value.value;
         }
         else
-            this._style.borderImage = value;
+            this._style.borderImage = value.valueOf();
     }
 
     get borderImageOutset(): string {
@@ -508,12 +546,13 @@ export default class CSSStyle {
     }
 
     set borderImageOutset(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderImageOutset = v)
             this._style.borderImageOutset = value.value;
         }
         else
-            this._style.borderImageOutset = value;
+            this._style.borderImageOutset = value.valueOf();
     }
 
     get borderImageRepeat(): string {
@@ -521,12 +560,13 @@ export default class CSSStyle {
     }
 
     set borderImageRepeat(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderImageRepeat = v)
             this._style.borderImageRepeat = value.value;
         }
         else
-            this._style.borderImageRepeat = value;
+            this._style.borderImageRepeat = value.valueOf();
     }
 
     get borderImageSlice(): string {
@@ -534,12 +574,13 @@ export default class CSSStyle {
     }
 
     set borderImageSlice(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderImageSlice = v)
             this._style.borderImageSlice = value.value;
         }
         else
-            this._style.borderImageSlice = value;
+            this._style.borderImageSlice = value.valueOf();
     }
 
     get borderImageSource(): string {
@@ -547,12 +588,13 @@ export default class CSSStyle {
     }
 
     set borderImageSource(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderImageSource = v)
             this._style.borderImageSource = value.value;
         }
         else
-            this._style.borderImageSource = value;
+            this._style.borderImageSource = value.valueOf();
     }
 
     get borderImageWidth(): string {
@@ -560,12 +602,13 @@ export default class CSSStyle {
     }
 
     set borderImageWidth(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderImageWidth = v)
             this._style.borderImageWidth = value.value;
         }
         else
-            this._style.borderImageWidth = value;
+            this._style.borderImageWidth = value.valueOf();
     }
     
     get borderLeft(): string {
@@ -573,12 +616,13 @@ export default class CSSStyle {
     }
 
     set borderLeft(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderLeft = v)
             this._style.borderLeft = value.value;
         }
         else
-            this._style.borderLeft = value;
+            this._style.borderLeft = value.valueOf();
     }
 
     get borderLeftColor(): string {
@@ -586,12 +630,13 @@ export default class CSSStyle {
     }
 
     set borderLeftColor(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderLeftColor = v)
             this._style.borderLeftColor = value.value;
         }
         else
-            this._style.borderLeftColor = value;
+            this._style.borderLeftColor = value.valueOf();
     }
 
     get borderLeftStyle(): string {
@@ -599,12 +644,13 @@ export default class CSSStyle {
     }
 
     set borderLeftStyle(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderLeftStyle = v)
             this._style.borderLeftStyle = value.value;
         }
         else
-            this._style.borderLeftStyle = value;
+            this._style.borderLeftStyle = value.valueOf();
     }
 
     get borderLeftWidth(): string {
@@ -612,12 +658,13 @@ export default class CSSStyle {
     }
 
     set borderLeftWidth(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderLeftWidth = v)
             this._style.borderLeftWidth = value.value;
         }
         else
-            this._style.borderLeftWidth = value;
+            this._style.borderLeftWidth = value.valueOf();
     }
 
     get borderRadius(): string {
@@ -625,12 +672,13 @@ export default class CSSStyle {
     }
 
     set borderRadius(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderRadius = v)
             this._style.borderRadius = value.value;
         }
         else
-            this._style.borderRadius = value;
+            this._style.borderRadius = value.valueOf();
     }
 
     get borderRight(): string {
@@ -638,12 +686,13 @@ export default class CSSStyle {
     }
 
     set borderRight(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderRight = v)
             this._style.borderRight = value.value;
         }
         else
-            this._style.borderRight = value;
+            this._style.borderRight = value.valueOf();
     }
 
     get borderRightColor(): string {
@@ -651,12 +700,13 @@ export default class CSSStyle {
     }
 
     set borderRightColor(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderRightColor = v)
             this._style.borderRightColor = value.value;
         }
         else
-            this._style.borderRightColor = value;
+            this._style.borderRightColor = value.valueOf();
     }
 
     get borderRightStyle(): string {
@@ -664,12 +714,13 @@ export default class CSSStyle {
     }
 
     set borderRightStyle(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderRightStyle = v)
             this._style.borderRightStyle = value.value;
         }
         else
-            this._style.borderRightStyle = value;
+            this._style.borderRightStyle = value.valueOf();
     }
 
     get borderRightWidth(): string {
@@ -677,12 +728,13 @@ export default class CSSStyle {
     }
     
     set borderRightWidth(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderRightWidth = v)
             this._style.borderRightWidth = value.value;
         }
         else
-            this._style.borderRightWidth = value;
+            this._style.borderRightWidth = value.valueOf();
     }
 
     get borderSpacing(): string {
@@ -690,12 +742,13 @@ export default class CSSStyle {
     }
 
     set borderSpacing(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderSpacing = v)
             this._style.borderSpacing = value.value;
         }
         else
-            this._style.borderSpacing = value;
+            this._style.borderSpacing = value.valueOf();
     }
     
     get borderStyle(): string {
@@ -703,12 +756,13 @@ export default class CSSStyle {
     }
 
     set borderStyle(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderStyle = v)
             this._style.borderStyle = value.value;
         }
         else
-            this._style.borderStyle = value;
+            this._style.borderStyle = value.valueOf();
     }
 
     get borderTop(): string {
@@ -716,12 +770,13 @@ export default class CSSStyle {
     }
 
     set borderTop(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderTop = v)
             this._style.borderTop = value.value;
         }
         else
-            this._style.borderTop = value;
+            this._style.borderTop = value.valueOf();
     }
 
     get borderTopColor(): string {
@@ -729,12 +784,13 @@ export default class CSSStyle {
     }
 
     set borderTopColor(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderTopColor = v)
             this._style.borderTopColor = value.value;
         }
         else
-            this._style.borderTopColor = value;
+            this._style.borderTopColor = value.valueOf();
     }
 
     get borderTopLeftRadius(): string {
@@ -742,12 +798,13 @@ export default class CSSStyle {
     }
 
     set borderTopLeftRadius(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderTopLeftRadius = v)
             this._style.borderTopLeftRadius = value.value;
         }
         else
-            this._style.borderTopLeftRadius = value;
+            this._style.borderTopLeftRadius = value.valueOf();
     }
 
     get borderTopRightRadius(): string {
@@ -755,12 +812,13 @@ export default class CSSStyle {
     }
 
     set borderTopRightRadius(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderTopRightRadius = v)
             this._style.borderTopRightRadius = value.value;
         }
         else
-            this._style.borderTopRightRadius = value;
+            this._style.borderTopRightRadius = value.valueOf();
     }
 
     get borderTopStyle(): string {
@@ -768,12 +826,13 @@ export default class CSSStyle {
     }
     
     set borderTopStyle(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderTopStyle = v)
             this._style.borderTopStyle = value.value;
         }
         else
-            this._style.borderTopStyle = value;
+            this._style.borderTopStyle = value.valueOf();
     }
     
     get borderTopWidth(): string {
@@ -781,12 +840,13 @@ export default class CSSStyle {
     }
 
     set borderTopWidth(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderTopWidth = v)
             this._style.borderTopWidth = value.value;
         }
         else
-            this._style.borderTopWidth = value;
+            this._style.borderTopWidth = value.valueOf();
     }
 
     get borderWidth(): string {
@@ -794,12 +854,13 @@ export default class CSSStyle {
     }
 
     set borderWidth(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.borderWidth = v)
             this._style.borderWidth = value.value;
         }
         else
-            this._style.borderWidth = value;
+            this._style.borderWidth = value.valueOf();
     }
     
     get boxShadow(): string {
@@ -807,12 +868,13 @@ export default class CSSStyle {
     }
 
     set boxShadow(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.boxShadow = v)
             this._style.boxShadow = value.value;
         }
         else
-            this._style.boxShadow = value;
+            this._style.boxShadow = value.valueOf();
     }
 
     get boxSizing(): string {
@@ -820,12 +882,13 @@ export default class CSSStyle {
     }
 
     set boxSizing(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.boxSizing = v)
             this._style.boxSizing = value.value;
         }
         else
-            this._style.boxSizing = value;
+            this._style.boxSizing = value.valueOf();
     }
 
     get breakAfter(): string {
@@ -833,12 +896,13 @@ export default class CSSStyle {
     }
 
     set breakAfter(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.breakAfter = v)
             this._style.breakAfter = value.value;
         }
         else
-            this._style.breakAfter = value;
+            this._style.breakAfter = value.valueOf();
     }
 
     get breakBefore(): string {
@@ -846,12 +910,13 @@ export default class CSSStyle {
     }
 
     set breakBefore(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.breakBefore = v)
             this._style.breakBefore = value.value;
         }
         else
-            this._style.breakBefore = value;
+            this._style.breakBefore = value.valueOf();
     }
 
     get breakInside(): string {
@@ -859,12 +924,13 @@ export default class CSSStyle {
     }
 
     set breakInside(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.breakInside = v)
             this._style.breakInside = value.value;
         }
         else
-            this._style.breakInside = value;
+            this._style.breakInside = value.valueOf();
     }
 
     get captionSide(): string {
@@ -872,12 +938,13 @@ export default class CSSStyle {
     }
     
     set captionSide(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.captionSide = v)
             this._style.captionSide = value.value;
         }
         else
-            this._style.captionSide = value;
+            this._style.captionSide = value.valueOf();
     }
 
     get clear(): string {
@@ -885,12 +952,13 @@ export default class CSSStyle {
     }
 
     set clear(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.clear = v)
             this._style.clear = value.value;
         }
         else
-            this._style.clear = value;
+            this._style.clear = value.valueOf();
     }
 
     get clip(): string {
@@ -898,12 +966,13 @@ export default class CSSStyle {
     }
 
     set clip(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.clip = v)
             this._style.clip = value.value;
         }
         else
-            this._style.clip = value;
+            this._style.clip = value.valueOf();
     }
 
     get color(): string {
@@ -911,12 +980,13 @@ export default class CSSStyle {
     }
 
     set color(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.color = v)
             this._style.color = value.value;
         }
         else
-            this._style.color = value;
+            this._style.color = value.valueOf();
     }
 
     get columnCount(): string {
@@ -924,12 +994,13 @@ export default class CSSStyle {
     }
 
     set columnCount(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.columnCount = v)
             this._style.columnCount = value.value;
         }
         else
-            this._style.columnCount = value;
+            this._style.columnCount = value.valueOf();
     }
 
     get columnFill(): string {
@@ -937,12 +1008,13 @@ export default class CSSStyle {
     }
 
     set columnFill(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.columnFill = v)
             this._style.columnFill = value.value;
         }
         else
-            this._style.columnFill = value;
+            this._style.columnFill = value.valueOf();
     }
 
     get columnGap(): string {
@@ -950,12 +1022,13 @@ export default class CSSStyle {
     }
 
     set columnGap(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.columnGap = v)
             this._style.columnGap = value.value;
         }
         else
-            this._style.columnGap = value;
+            this._style.columnGap = value.valueOf();
     }
 
     get columnRule(): string {
@@ -963,12 +1036,13 @@ export default class CSSStyle {
     }
 
     set columnRule(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.columnRule = v)
             this._style.columnRule = value.value;
         }
         else
-            this._style.columnRule = value;
+            this._style.columnRule = value.valueOf();
     }
 
     get columnRuleColor(): string {
@@ -976,12 +1050,13 @@ export default class CSSStyle {
     }
 
     set columnRuleColor(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.columnRuleColor = v)
             this._style.columnRuleColor = value.value;
         }
         else
-            this._style.columnRuleColor = value;
+            this._style.columnRuleColor = value.valueOf();
     }
 
     get columnRuleStyle(): string {
@@ -989,12 +1064,13 @@ export default class CSSStyle {
     }
     
     set columnRuleStyle(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.columnRuleStyle = v)
             this._style.columnRuleStyle = value.value;
         }
         else
-            this._style.columnRuleStyle = value;
+            this._style.columnRuleStyle = value.valueOf();
     }
     
     get columnRuleWidth(): string {
@@ -1002,12 +1078,13 @@ export default class CSSStyle {
     }
 
     set columnRuleWidth(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.columnRuleWidth = v)
             this._style.columnRuleWidth = value.value;
         }
         else
-            this._style.columnRuleWidth = value;
+            this._style.columnRuleWidth = value.valueOf();
     }
 
     get columnSpan(): string {
@@ -1015,12 +1092,13 @@ export default class CSSStyle {
     }
 
     set columnSpan(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.columnSpan = v)
             this._style.columnSpan = value.value;
         }
         else
-            this._style.columnSpan = value;
+            this._style.columnSpan = value.valueOf();
     }
 
     get columnWidth(): string {
@@ -1028,12 +1106,13 @@ export default class CSSStyle {
     }
 
     set columnWidth(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.columnWidth = v)
             this._style.columnWidth = value.value;
         }
         else
-            this._style.columnWidth = value;
+            this._style.columnWidth = value.valueOf();
     }
 
     get columns(): string {
@@ -1041,12 +1120,13 @@ export default class CSSStyle {
     }
 
     set columns(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.columns = v)
             this._style.columns = value.value;
         }
         else
-            this._style.columns = value;
+            this._style.columns = value.valueOf();
     }
     
     get content(): string {
@@ -1054,12 +1134,13 @@ export default class CSSStyle {
     }
 
     set content(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.content = v)
             this._style.content = value.value;
         }
         else
-            this._style.content = value;
+            this._style.content = value.valueOf();
     }
 
     get counterIncrement(): string {
@@ -1067,12 +1148,13 @@ export default class CSSStyle {
     }
 
     set counterIncrement(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.counterIncrement = v)
             this._style.counterIncrement = value.value;
         }
         else
-            this._style.counterIncrement = value;
+            this._style.counterIncrement = value.valueOf();
     }
 
     get counterReset(): string {
@@ -1080,12 +1162,13 @@ export default class CSSStyle {
     }
 
     set counterReset(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.counterReset = v)
             this._style.counterReset = value.value;
         }
         else
-            this._style.counterReset = value;
+            this._style.counterReset = value.valueOf();
     }
 
     get cursor(): string {
@@ -1093,12 +1176,13 @@ export default class CSSStyle {
     }
 
     set cursor(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.cursor = v)
             this._style.cursor = value.value;
         }
         else
-            this._style.cursor = value;
+            this._style.cursor = value.valueOf();
     }
 
     get direction(): string {
@@ -1106,12 +1190,13 @@ export default class CSSStyle {
     }
 
     set direction(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.direction = v)
             this._style.direction = value.value;
         }
         else
-            this._style.direction = value;
+            this._style.direction = value.valueOf();
     }
 
     get display(): string {
@@ -1119,12 +1204,13 @@ export default class CSSStyle {
     }
 
     set display(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.display = v)
             this._style.display = value.value;
         }
         else
-            this._style.display = value;
+            this._style.display = value.valueOf();
     }
 
     get emptyCells(): string {
@@ -1132,12 +1218,13 @@ export default class CSSStyle {
     }
 
     set emptyCells(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.emptyCells = v)
             this._style.emptyCells = value.value;
         }
         else
-            this._style.emptyCells = value;
+            this._style.emptyCells = value.valueOf();
     }
 
     get filter(): string {
@@ -1145,12 +1232,13 @@ export default class CSSStyle {
     }
 
     set filter(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.filter = v)
             this._style.filter = value.value;
         }
         else
-            this._style.filter = value;
+            this._style.filter = value.valueOf();
     }
     
     get flex(): string {
@@ -1158,12 +1246,13 @@ export default class CSSStyle {
     }
 
     set flex(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.flex = v)
             this._style.flex = value.value;
         }
         else
-            this._style.flex = value;
+            this._style.flex = value.valueOf();
     }
 
     get flexBasis(): string {
@@ -1171,12 +1260,13 @@ export default class CSSStyle {
     }
 
     set flexBasis(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.flexBasis = v)
             this._style.flexBasis = value.value;
         }
         else
-            this._style.flexBasis = value;
+            this._style.flexBasis = value.valueOf();
     }
 
     get flexDirection(): string {
@@ -1184,12 +1274,13 @@ export default class CSSStyle {
     }
 
     set flexDirection(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.flexDirection = v)
             this._style.flexDirection = value.value;
         }
         else
-            this._style.flexDirection = value;
+            this._style.flexDirection = value.valueOf();
     }
 
     get flexFlow(): string {
@@ -1197,12 +1288,13 @@ export default class CSSStyle {
     }
 
     set flexFlow(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.flexFlow = v)
             this._style.flexFlow = value.value;
         }
         else
-            this._style.flexFlow = value;
+            this._style.flexFlow = value.valueOf();
     }
 
     get flexGrow(): string {
@@ -1210,12 +1302,13 @@ export default class CSSStyle {
     }
 
     set flexGrow(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.flexGrow = v)
             this._style.flexGrow = value.value;
         }
         else
-            this._style.flexGrow = value;
+            this._style.flexGrow = value.valueOf();
     }
 
     get flexShrink(): string {
@@ -1223,12 +1316,13 @@ export default class CSSStyle {
     }
 
     set flexShrink(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.flexShrink = v)
             this._style.flexShrink = value.value;
         }
         else
-            this._style.flexShrink = value;
+            this._style.flexShrink = value.valueOf();
     }
 
     get flexWrap(): string {
@@ -1236,12 +1330,13 @@ export default class CSSStyle {
     }
 
     set flexWrap(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.flexWrap = v)
             this._style.flexWrap = value.value;
         }
         else
-            this._style.flexWrap = value;
+            this._style.flexWrap = value.valueOf();
     }
 
     get float(): string {
@@ -1249,12 +1344,13 @@ export default class CSSStyle {
     }
 
     set float(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.float = v)
             this._style.float = value.value;
         }
         else
-            this._style.float = value;
+            this._style.float = value.valueOf();
     }
 
     get font(): string {
@@ -1262,12 +1358,13 @@ export default class CSSStyle {
     }
 
     set font(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.font = v)
             this._style.font = value.value;
         }
         else
-            this._style.font = value;
+            this._style.font = value.valueOf();
     }
 
     get fontFamily(): string {
@@ -1275,12 +1372,13 @@ export default class CSSStyle {
     }
 
     set fontFamily(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontFamily = v)
             this._style.fontFamily = value.value;
         }
         else
-            this._style.fontFamily = value;
+            this._style.fontFamily = value.valueOf();
     }
 
     get fontFeatureSettings(): string {
@@ -1288,12 +1386,13 @@ export default class CSSStyle {
     }
 
     set fontFeatureSettings(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontFeatureSettings = v)
             this._style.fontFeatureSettings = value.value;
         }
         else
-            this._style.fontFeatureSettings = value;
+            this._style.fontFeatureSettings = value.valueOf();
     }
 
     get fontKerning(): string {
@@ -1301,12 +1400,13 @@ export default class CSSStyle {
     }
 
     set fontKerning(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontKerning = v)
             this._style.fontKerning = value.value;
         }
         else
-            this._style.fontKerning = value;
+            this._style.fontKerning = value.valueOf();
     }
 
   
@@ -1315,12 +1415,13 @@ export default class CSSStyle {
     }
 
     set fontStretch(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontStretch = v)
             this._style.fontStretch = value.value;
         }
         else
-            this._style.fontStretch = value;
+            this._style.fontStretch = value.valueOf();
     }
 
     get fontStyle(): string {
@@ -1328,12 +1429,13 @@ export default class CSSStyle {
     }
 
     set fontStyle(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontStyle = v)
             this._style.fontStyle = value.value;
         }
         else
-            this._style.fontStyle = value;
+            this._style.fontStyle = value.valueOf();
     }
 
     get fontVariant(): string {
@@ -1341,12 +1443,13 @@ export default class CSSStyle {
     }
 
     set fontVariant(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontVariant = v)
             this._style.fontVariant = value.value;
         }
         else
-            this._style.fontVariant = value;
+            this._style.fontVariant = value.valueOf();
     }
 
     get fontVariantCaps(): string {
@@ -1354,12 +1457,13 @@ export default class CSSStyle {
     }
 
     set fontVariantCaps(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontVariantCaps = v)
             this._style.fontVariantCaps = value.value;
         }
         else
-            this._style.fontVariantCaps = value;
+            this._style.fontVariantCaps = value.valueOf();
     }
 
     get fontVariantEastAsian(): string {
@@ -1367,12 +1471,13 @@ export default class CSSStyle {
     }
 
     set fontVariantEastAsian(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontVariantEastAsian = v)
             this._style.fontVariantEastAsian = value.value;
         }
         else
-            this._style.fontVariantEastAsian = value;
+            this._style.fontVariantEastAsian = value.valueOf();
     }
 
     get fontVariantLigatures(): string {
@@ -1380,12 +1485,13 @@ export default class CSSStyle {
     }
 
     set fontVariantLigatures(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontVariantLigatures = v)
             this._style.fontVariantLigatures = value.value;
         }
         else
-            this._style.fontVariantLigatures = value;
+            this._style.fontVariantLigatures = value.valueOf();
     }
 
     get fontVariantNumeric(): string {
@@ -1393,12 +1499,13 @@ export default class CSSStyle {
     }
 
     set fontVariantNumeric(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontVariantNumeric = v)
             this._style.fontVariantNumeric = value.value;
         }
         else
-            this._style.fontVariantNumeric = value;
+            this._style.fontVariantNumeric = value.valueOf();
     }
 
     get fontVariantPosition(): string {
@@ -1406,12 +1513,13 @@ export default class CSSStyle {
     }
 
     set fontVariantPosition(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontVariantPosition = v)
             this._style.fontVariantPosition = value.value;
         }
         else
-            this._style.fontVariantPosition = value;
+            this._style.fontVariantPosition = value.valueOf();
     }
 
     get fontWeight(): string {
@@ -1419,12 +1527,13 @@ export default class CSSStyle {
     }
 
     set fontWeight(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.fontWeight = v)
             this._style.fontWeight = value.value;
         }
         else
-            this._style.fontWeight = value;
+            this._style.fontWeight = value.valueOf();
     }
 
     get gap(): string {
@@ -1432,12 +1541,13 @@ export default class CSSStyle {
     }
 
     set gap(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gap = v)
             this._style.gap = value.value;
         }
         else
-            this._style.gap = value;
+            this._style.gap = value.valueOf();
     }
 
     get grid(): string {
@@ -1445,12 +1555,13 @@ export default class CSSStyle {
     }
 
     set grid(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.grid = v)
             this._style.grid = value.value;
         }
         else
-            this._style.grid = value;
+            this._style.grid = value.valueOf();
     }
 
     get gridArea(): string {
@@ -1458,12 +1569,13 @@ export default class CSSStyle {
     }
 
     set gridArea(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridArea = v)
             this._style.gridArea = value.value;
         }
         else
-            this._style.gridArea = value;
+            this._style.gridArea = value.valueOf();
     }
 
     get gridAutoColumns(): string {
@@ -1471,12 +1583,13 @@ export default class CSSStyle {
     }
 
     set gridAutoColumns(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridAutoColumns = v)
             this._style.gridAutoColumns = value.value;
         }
         else
-            this._style.gridAutoColumns = value;
+            this._style.gridAutoColumns = value.valueOf();
     }
 
     get gridAutoFlow(): string {
@@ -1484,12 +1597,13 @@ export default class CSSStyle {
     }
 
     set gridAutoFlow(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridAutoFlow = v)
             this._style.gridAutoFlow = value.value;
         }
         else
-            this._style.gridAutoFlow = value;
+            this._style.gridAutoFlow = value.valueOf();
     }
 
     get gridAutoRows(): string {
@@ -1497,12 +1611,13 @@ export default class CSSStyle {
     }
 
     set gridAutoRows(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridAutoRows = v)
             this._style.gridAutoRows = value.value;
         }
         else
-            this._style.gridAutoRows = value;
+            this._style.gridAutoRows = value.valueOf();
     }
 
     get gridColumn(): string {
@@ -1510,12 +1625,13 @@ export default class CSSStyle {
     }
 
     set gridColumn(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridColumn = v)
             this._style.gridColumn = value.value;
         }
         else
-            this._style.gridColumn = value;
+            this._style.gridColumn = value.valueOf();
     }
 
     get gridColumnEnd(): string {
@@ -1523,12 +1639,13 @@ export default class CSSStyle {
     }
 
     set gridColumnEnd(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridColumnEnd = v)
             this._style.gridColumnEnd = value.value;
         }
         else
-            this._style.gridColumnEnd = value;
+            this._style.gridColumnEnd = value.valueOf();
     }
 
     get gridColumnGap(): string {
@@ -1536,12 +1653,13 @@ export default class CSSStyle {
     }
 
     set gridColumnGap(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridColumnGap = v)
             this._style.gridColumnGap = value.value;
         }
         else
-            this._style.gridColumnGap = value;
+            this._style.gridColumnGap = value.valueOf();
     }
 
     get gridColumnStart(): string {
@@ -1549,12 +1667,13 @@ export default class CSSStyle {
     }
 
     set gridColumnStart(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridColumnStart = v)
             this._style.gridColumnStart = value.value;
         }
         else
-            this._style.gridColumnStart = value;
+            this._style.gridColumnStart = value.valueOf();
     }
 
     get gridGap(): string {
@@ -1566,12 +1685,13 @@ export default class CSSStyle {
     }
 
     set top(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.top = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.top = value;
+            this._style.top = value.valueOf();
     }
 
     get right(): string {
@@ -1579,12 +1699,13 @@ export default class CSSStyle {
     }
 
     set right(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.right = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.right = value;
+            this._style.right = value.valueOf();
     }
 
     get bottom(): string {
@@ -1592,12 +1713,13 @@ export default class CSSStyle {
     }
 
     set bottom(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.bottom = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.bottom = value;
+            this._style.bottom = value.valueOf();
     }
 
     get left(): string {
@@ -1605,12 +1727,13 @@ export default class CSSStyle {
     }
 
     set left(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.left = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.left = value;
+            this._style.left = value.valueOf();
     }
 
     get gridRow(): string {
@@ -1618,12 +1741,13 @@ export default class CSSStyle {
     }
 
     set gridRow(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridRow = v)
             this._style.gridRow = value.value;
         }
         else
-            this._style.gridRow = value;
+            this._style.gridRow = value.valueOf();
     }
 
     get gridRowEnd(): string {
@@ -1631,12 +1755,13 @@ export default class CSSStyle {
     }
 
     set gridRowEnd(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridRowEnd = v)
             this._style.gridRowEnd = value.value;
         }
         else
-            this._style.gridRowEnd = value;
+            this._style.gridRowEnd = value.valueOf();
     }
 
     get gridRowGap(): string {
@@ -1644,12 +1769,13 @@ export default class CSSStyle {
     }
 
     set gridRowGap(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridRowGap = v)
             this._style.gridRowGap = value.value;
         }
         else
-            this._style.gridRowGap = value;
+            this._style.gridRowGap = value.valueOf();
     }
 
     get gridRowStart(): string {
@@ -1657,12 +1783,13 @@ export default class CSSStyle {
     }
 
     set gridRowStart(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridRowStart = v)
             this._style.gridRowStart = value.value;
         }
         else
-            this._style.gridRowStart = value;
+            this._style.gridRowStart = value.valueOf();
     }
 
     get gridTemplate(): string {
@@ -1670,12 +1797,13 @@ export default class CSSStyle {
     }
 
     set gridTemplate(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.gridTemplate = v)
             this._style.gridTemplate = value.value;
         }
         else
-            this._style.gridTemplate = value;
+            this._style.gridTemplate = value.valueOf();
     }
 
     get gridTemplateAreas(): string {
@@ -1687,12 +1815,13 @@ export default class CSSStyle {
     }
 
     set width(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.width = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.width = value;
+            this._style.width = value.valueOf();
     }
 
     get height(): string {
@@ -1700,12 +1829,13 @@ export default class CSSStyle {
     }
 
     set height(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.height = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.height = value;
+            this._style.height = value.valueOf();
     }
 
     get minWidth(): string {
@@ -1713,12 +1843,13 @@ export default class CSSStyle {
     }
 
     set minWidth(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.minWidth = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.minWidth = value;
+            this._style.minWidth = value.valueOf();
     }
 
     get minHeight(): string {
@@ -1726,12 +1857,13 @@ export default class CSSStyle {
     }
 
     set minHeight(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.minHeight = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.minHeight = value;
+            this._style.minHeight = value.valueOf();
     }
 
     get maxWidth(): string {
@@ -1739,12 +1871,13 @@ export default class CSSStyle {
     }
 
     set maxWidth(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.maxWidth = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.maxWidth = value;
+            this._style.maxWidth = value.valueOf();
     }
 
     get maxHeight(): string {
@@ -1752,12 +1885,13 @@ export default class CSSStyle {
     }
 
     set maxHeight(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.maxHeight = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.maxHeight = value;
+            this._style.maxHeight = value.valueOf();
     }
 
     get margin(): string {
@@ -1765,12 +1899,13 @@ export default class CSSStyle {
     }
 
     set margin(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.margin = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.margin = value;
+            this._style.margin = value.valueOf();
     }
 
     get marginTop(): string {
@@ -1778,12 +1913,13 @@ export default class CSSStyle {
     }
 
     set marginTop(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.marginTop = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.marginTop = value;
+            this._style.marginTop = value.valueOf();
     }
 
     get marginRight(): string {
@@ -1791,12 +1927,13 @@ export default class CSSStyle {
     }
 
     set marginRight(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.marginRight = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.marginRight = value;
+            this._style.marginRight = value.valueOf();
     }
 
     get marginBottom(): string {
@@ -1804,12 +1941,13 @@ export default class CSSStyle {
     }
 
     set marginBottom(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.marginBottom = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.marginBottom = value;
+            this._style.marginBottom = value.valueOf();
     }
 
     get marginLeft(): string {
@@ -1817,12 +1955,13 @@ export default class CSSStyle {
     }
 
     set marginLeft(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.marginLeft = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.marginLeft = value;
+            this._style.marginLeft = value.valueOf();
     }
 
     get padding(): string {
@@ -1830,12 +1969,13 @@ export default class CSSStyle {
     }
 
     set padding(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.padding = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.padding = value;
+            this._style.padding = value.valueOf();
     }
 
     get paddingTop(): string {
@@ -1843,12 +1983,13 @@ export default class CSSStyle {
     }
 
     set paddingTop(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.paddingTop = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.paddingTop = value;
+            this._style.paddingTop = value.valueOf();
     }
 
     get paddingRight(): string {
@@ -1856,12 +1997,13 @@ export default class CSSStyle {
     }
 
     set paddingRight(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.paddingRight = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.paddingRight = value;
+            this._style.paddingRight = value.valueOf();
     }
 
     get paddingBottom(): string {
@@ -1869,12 +2011,13 @@ export default class CSSStyle {
     }
 
     set paddingBottom(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.paddingBottom = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.paddingBottom = value;
+            this._style.paddingBottom = value.valueOf();
     }
 
     get paddingLeft(): string {
@@ -1882,12 +2025,13 @@ export default class CSSStyle {
     }
 
     set paddingLeft(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.paddingLeft = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
         }
         else
-            this._style.paddingLeft = value;
+            this._style.paddingLeft = value.valueOf();
     }
 
     get position(): string {
@@ -1895,12 +2039,13 @@ export default class CSSStyle {
     }
 
     set position(value: string | Ref<any>) {
-        if (value instanceof Ref) {
+        if (typeof value === 'object') {
+            value = (value as Ref<any>)
             value.on((v) => this._style.position = v.toString())
             value.emit();
         }
         else
-            this._style.position = value;
+            this._style.position = value.valueOf();
     }
 
 }

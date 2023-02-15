@@ -2,15 +2,28 @@
 
 type callback<T> = (value: T) => void
 
-export class Ref<T> {
+export interface Ref<T> {
+
+    get value(): T;
+    set value(v: T);
+    get ref(): Ref<any>;
+    valueOf(): T;
+    on(callback: (value: T) => void) : void;
+    emit(): void;
+    reset(): void;
+    toString(): string;
+}
+
+
+export class Reference<T> implements Ref<T>{
 
     private calllbacks: callback<T>[] = [];
     private static _id = 100000;
-    private static refs = new Map<string, Ref<any>>();
+    private static refs = new Map<string, Reference<any>>();
 
 
-    public static ref<T>(value: T): Ref<T> {
-        return new Ref<T>(value);
+    public static ref<T>(value: T): Reference<T> {
+        return new Reference<T>(value);
     }
 
     private _value: T;
@@ -19,9 +32,16 @@ export class Ref<T> {
     public constructor(value: T) {
         this._value = value;
         this._value_origen = value;
-        Ref._id++;
+        Reference._id++;
     }
 
+    valueOf(): T {
+        return this._value;
+    }
+
+    get ref(): Ref<any> {
+        return this;
+    }
 
     public get value(): T {
         return this._value;
@@ -46,20 +66,16 @@ export class Ref<T> {
     }
 
     public toString = () : string => {
-        return `{Ref{${Ref._id}}Ref}`;
+        return `{Ref{${Reference._id}}Ref}`;
     }
 
     public static getRef(id: string) {
-        return Ref.refs.get(id);
+        return Reference.refs.get(id);
     }
 
 }
 
-export interface refType {
-    get ref(): Ref<any>;
-    set ref(value: Ref<any>);
-}
 
-export function ref<T>(value: T): Ref<T> {
-    return new Ref<T>(value);
+export function ref<T>(value: T): Reference<T> {
+    return new Reference<T>(value);
 }

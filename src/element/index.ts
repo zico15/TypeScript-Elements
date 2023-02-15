@@ -1,4 +1,5 @@
 import Element from "./base/Element"; 
+import ElementRef from "./base/ElementRef";
 import H1Element from "./h/H1Element";
 import H2Element from "./h/H2Element";
 import H3Element from "./h/H3Element";
@@ -18,6 +19,7 @@ import SvgElement from "./image/SvgElement";
 
 export {
     Element,
+    ElementRef,
     H1Element,
     H2Element,
     H3Element,

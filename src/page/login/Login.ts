@@ -12,7 +12,7 @@ export default class Login extends PageElement {
         panel.appendChild(new LabelElement("Usuario"), this.usuario, new LabelElement("Password") ,this.password);
         const login = new ButtonElement("login");
         login.addEventListener("click", () => {
-            console.log("login");
+            console.log({usuario: this.usuario.value, password: this.password.value});
         });
         panel.appendChild(login, new LabelElement(this.usuario));
         this.appendChild(panel);
