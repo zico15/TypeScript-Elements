@@ -1,6 +1,5 @@
 
-import { PageElement, H1Element, DivElement, ButtonElement, AnchorPane } from '../element';
-import { router } from "../router/Router";
+import { PageElement, ButtonElement, AnchorPane } from '../element';
 import { ref } from '../factory/Ref';
 
 export class Home extends PageElement {

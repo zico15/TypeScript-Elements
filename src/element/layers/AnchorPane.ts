@@ -1,6 +1,6 @@
 
 import { Ref } from "../../factory/Ref";
-import { Pane, Element} from "../";
+import { Element} from "../";
 
 export default class AnchorPane extends Element {
     

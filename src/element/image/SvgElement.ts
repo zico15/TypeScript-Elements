@@ -10,7 +10,7 @@ export default class SvgElement extends Element {
     public async load(src: string) {
         await fetch(src).then((response) => {
             return response.text();
-        }).then((data) => this.createElement("svg", data)).catch((err) => this.element = document.createElement("svg"));
+        }).then((data) => this.createElement("svg", data)).catch(() => this.element = document.createElement("svg"));
     }
 }
 

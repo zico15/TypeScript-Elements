@@ -35,7 +35,3 @@ export class Tes {
     }
 
 }
-
-let a = new Tes()
-
-a.id

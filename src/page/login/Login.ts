@@ -1,5 +1,5 @@
 import { router } from "../../router/Router";
-import { PageElement, DivElement, InputElement, LabelElement, ButtonElement, styleLink } from "../../element";
+import { PageElement, DivElement, InputElement, LabelElement, ButtonElement } from "../../element";
 
 // function Componente(target: Function & typeof PageElement) {
 //     return class extends target {
