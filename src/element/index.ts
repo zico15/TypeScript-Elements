@@ -1,5 +1,4 @@
-import Element from "./base/Element"; 
-import ElementRef from "./base/ElementRef";
+import Element from "./base/Element";
 import H1Element from "./h/H1Element";
 import H2Element from "./h/H2Element";
 import H3Element from "./h/H3Element";
@@ -9,6 +8,7 @@ import PageElement from "./page/PageElement";
 import ButtonElement from "./action/ButtonElement";
 import InputElement from "./action/InputElement";
 import LabelElement from "./text/LabelElement";
+import { styleLink } from "./page/PageElement";
 
 // Layer Elements
 import AnchorPane from "./layers/AnchorPane";
@@ -19,7 +19,6 @@ import SvgElement from "./image/SvgElement";
 
 export {
     Element,
-    ElementRef,
     H1Element,
     H2Element,
     H3Element,
@@ -31,5 +30,6 @@ export {
     Pane,
     SvgElement,
     InputElement,
-    LabelElement
+    LabelElement,
+    styleLink,
 }

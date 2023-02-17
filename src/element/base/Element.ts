@@ -1,6 +1,6 @@
 import { Reference } from "../../factory/Ref";
 import CSSStyle from "./CSSStyle"
-import ElementRef from "./ElementRef";
+
 
 export default class Element{
 
@@ -59,6 +59,7 @@ export default class Element{
     setAttribute(name: string, value: string) {
         this.element.setAttribute(name, value);
     }
+    
 
     /** 
      * use addLink instead
@@ -98,9 +99,9 @@ export default class Element{
         if (values.length > 0) {
             let text = ""
             values.forEach((value) => {
-                if (value instanceof Reference || value?.ref) {
+                if (value instanceof Reference || typeof value === "object") {
                     value.on(() => {
-                        this.element.innerHTML = values.map((v) => v instanceof Reference || value?.ref? v.value : v).join("");
+                        this.element.innerHTML = values.map((v) => v instanceof Reference || typeof value === "object" ? v.value : v).join("");
                     } )
                     text += value.value;
                 }
@@ -138,6 +139,14 @@ export default class Element{
 
     protected set element(v: HTMLElement) {
         this.node = v;
+    }
+
+    public get id(): string {
+        return this.element.id;
+    }
+
+    public set id(v: string) {
+        this.element.id = v;
     }
 
     public get x(): number {

@@ -13,7 +13,7 @@ export default class CSSStyle {
     }
 
     set alignContent(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
 
             value.on((v) => this._style.alignContent = v)
@@ -28,7 +28,7 @@ export default class CSSStyle {
     }
 
     set alignItems(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.alignItems = v)
             this._style.alignItems = value.value;
@@ -42,7 +42,7 @@ export default class CSSStyle {
     }
 
     set alignSelf(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.alignSelf = v)
             this._style.alignSelf = value.value;
@@ -56,7 +56,7 @@ export default class CSSStyle {
     }
 
     set alignmentBaseline(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.alignmentBaseline = v)
             this._style.alignmentBaseline = value.value;
@@ -70,7 +70,7 @@ export default class CSSStyle {
     }
 
     set all(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.all = v)
             this._style.all = value.value;
@@ -84,7 +84,7 @@ export default class CSSStyle {
     }
 
     set animation(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.animation = v)
             this._style.animation = value.value;
@@ -98,7 +98,7 @@ export default class CSSStyle {
     }
 
     set animationDelay(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.animationDelay = v)
             this._style.animationDelay = value.value;
@@ -112,7 +112,7 @@ export default class CSSStyle {
     }
 
     set animationDirection(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.animationDirection = v)
             this._style.animationDirection = value.value;
@@ -126,7 +126,7 @@ export default class CSSStyle {
     }
 
     set animationDuration(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.animationDuration = v)
             this._style.animationDuration = value.value;
@@ -140,7 +140,7 @@ export default class CSSStyle {
     }
 
     set animationFillMode(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.animationFillMode = v)
             this._style.animationFillMode = value.value;
@@ -154,7 +154,7 @@ export default class CSSStyle {
     }
 
     set animationIterationCount(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.animationIterationCount = v)
             this._style.animationIterationCount = value.value;
@@ -168,7 +168,7 @@ export default class CSSStyle {
     }
 
     set animationName(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.animationName = v)
             this._style.animationName = value.value;
@@ -182,7 +182,7 @@ export default class CSSStyle {
     }
 
     set animationPlayState(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.animationPlayState = v)
             this._style.animationPlayState = value.value;
@@ -196,7 +196,7 @@ export default class CSSStyle {
     }
 
     set animationTimingFunction(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.animationTimingFunction = v)
             this._style.animationTimingFunction = value.value;
@@ -211,7 +211,7 @@ export default class CSSStyle {
 
     set backfaceVisibility(value: string | Ref<any>) {
 
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backfaceVisibility = v)
             this._style.backfaceVisibility = value.value;
@@ -226,7 +226,7 @@ export default class CSSStyle {
 
     set background(value: string | Ref<any>) {
 
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.background = v)
             this._style.background = value.value;
@@ -241,7 +241,7 @@ export default class CSSStyle {
 
     set backgroundAttachment(value: string | Ref<any>) {
 
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundAttachment = v)
             this._style.backgroundAttachment = value.value;
@@ -256,7 +256,7 @@ export default class CSSStyle {
 
     set backgroundBlendMode(value: string | Ref<any>) {
 
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundBlendMode = v)
             this._style.backgroundBlendMode = value.value;
@@ -271,7 +271,7 @@ export default class CSSStyle {
 
     set backgroundClip(value: string | Ref<any>) {
 
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundClip = v)
             this._style.backgroundClip = value.value;
@@ -285,7 +285,7 @@ export default class CSSStyle {
     }
 
     set backgroundColor(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundColor = v)
             this._style.backgroundColor = value.value;
@@ -299,7 +299,7 @@ export default class CSSStyle {
     }
 
     set backgroundImage(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundImage = v)
             this._style.backgroundImage = value.value;
@@ -313,7 +313,7 @@ export default class CSSStyle {
     }
 
     set backgroundOrigin(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundOrigin = v)
             this._style.backgroundOrigin = value.value;
@@ -329,7 +329,7 @@ export default class CSSStyle {
 
     set backgroundPosition(value: string | Ref<any>) {
 
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundPosition = v)
             this._style.backgroundPosition = value.value;
@@ -343,7 +343,7 @@ export default class CSSStyle {
     }
 
     set backgroundPositionX(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundPositionX = v)
             this._style.backgroundPositionX = value.value;
@@ -358,7 +358,7 @@ export default class CSSStyle {
 
 
     set backgroundPositionY(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundPositionY = v)
             this._style.backgroundPositionY = value.value;
@@ -372,7 +372,7 @@ export default class CSSStyle {
     }
 
     set backgroundRepeat(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundRepeat = v)
             this._style.backgroundRepeat = value.value;
@@ -387,7 +387,7 @@ export default class CSSStyle {
 
 
     set backgroundSize(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.backgroundSize = v)
             this._style.backgroundSize = value.value;
@@ -401,7 +401,7 @@ export default class CSSStyle {
     }
 
     set border(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.border = v)
             this._style.border = value.value;
@@ -415,7 +415,7 @@ export default class CSSStyle {
     }
 
     set borderBottom(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderBottom = v)
             this._style.borderBottom = value.value;
@@ -430,7 +430,7 @@ export default class CSSStyle {
     }
 
     set borderBottomColor(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderBottomColor = v)
             this._style.borderBottomColor = value.value;
@@ -444,7 +444,7 @@ export default class CSSStyle {
     }
 
     set borderBottomLeftRadius(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderBottomLeftRadius = v)
             this._style.borderBottomLeftRadius = value.value;
@@ -458,7 +458,7 @@ export default class CSSStyle {
     }
 
     set borderBottomRightRadius(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderBottomRightRadius = v)
             this._style.borderBottomRightRadius = value.value;
@@ -472,7 +472,7 @@ export default class CSSStyle {
     }
 
     set borderBottomStyle(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderBottomStyle = v)
             this._style.borderBottomStyle = value.value;
@@ -487,7 +487,7 @@ export default class CSSStyle {
 
     set borderBottomWidth(value: string | Ref<any>) {
 
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderBottomWidth = v)
             this._style.borderBottomWidth = value.value;
@@ -501,7 +501,7 @@ export default class CSSStyle {
     }
 
     set borderCollapse(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderCollapse = v)
             this._style.borderCollapse = value.value;
@@ -516,7 +516,7 @@ export default class CSSStyle {
 
     set borderColor(value: string | Ref<any>) {
 
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderColor = v)
             this._style.borderColor = value.value;
@@ -532,7 +532,7 @@ export default class CSSStyle {
 
     set borderImage(value: string | Ref<any>) {
 
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderImage = v)
             this._style.borderImage = value.value;
@@ -546,7 +546,7 @@ export default class CSSStyle {
     }
 
     set borderImageOutset(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderImageOutset = v)
             this._style.borderImageOutset = value.value;
@@ -560,7 +560,7 @@ export default class CSSStyle {
     }
 
     set borderImageRepeat(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderImageRepeat = v)
             this._style.borderImageRepeat = value.value;
@@ -574,7 +574,7 @@ export default class CSSStyle {
     }
 
     set borderImageSlice(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderImageSlice = v)
             this._style.borderImageSlice = value.value;
@@ -588,7 +588,7 @@ export default class CSSStyle {
     }
 
     set borderImageSource(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderImageSource = v)
             this._style.borderImageSource = value.value;
@@ -602,7 +602,7 @@ export default class CSSStyle {
     }
 
     set borderImageWidth(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderImageWidth = v)
             this._style.borderImageWidth = value.value;
@@ -616,7 +616,7 @@ export default class CSSStyle {
     }
 
     set borderLeft(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderLeft = v)
             this._style.borderLeft = value.value;
@@ -630,7 +630,7 @@ export default class CSSStyle {
     }
 
     set borderLeftColor(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderLeftColor = v)
             this._style.borderLeftColor = value.value;
@@ -644,7 +644,7 @@ export default class CSSStyle {
     }
 
     set borderLeftStyle(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderLeftStyle = v)
             this._style.borderLeftStyle = value.value;
@@ -658,7 +658,7 @@ export default class CSSStyle {
     }
 
     set borderLeftWidth(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderLeftWidth = v)
             this._style.borderLeftWidth = value.value;
@@ -672,7 +672,7 @@ export default class CSSStyle {
     }
 
     set borderRadius(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderRadius = v)
             this._style.borderRadius = value.value;
@@ -686,7 +686,7 @@ export default class CSSStyle {
     }
 
     set borderRight(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderRight = v)
             this._style.borderRight = value.value;
@@ -700,7 +700,7 @@ export default class CSSStyle {
     }
 
     set borderRightColor(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderRightColor = v)
             this._style.borderRightColor = value.value;
@@ -714,7 +714,7 @@ export default class CSSStyle {
     }
 
     set borderRightStyle(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderRightStyle = v)
             this._style.borderRightStyle = value.value;
@@ -728,7 +728,7 @@ export default class CSSStyle {
     }
     
     set borderRightWidth(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderRightWidth = v)
             this._style.borderRightWidth = value.value;
@@ -742,7 +742,7 @@ export default class CSSStyle {
     }
 
     set borderSpacing(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderSpacing = v)
             this._style.borderSpacing = value.value;
@@ -756,7 +756,7 @@ export default class CSSStyle {
     }
 
     set borderStyle(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderStyle = v)
             this._style.borderStyle = value.value;
@@ -770,7 +770,7 @@ export default class CSSStyle {
     }
 
     set borderTop(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderTop = v)
             this._style.borderTop = value.value;
@@ -784,7 +784,7 @@ export default class CSSStyle {
     }
 
     set borderTopColor(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderTopColor = v)
             this._style.borderTopColor = value.value;
@@ -798,7 +798,7 @@ export default class CSSStyle {
     }
 
     set borderTopLeftRadius(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderTopLeftRadius = v)
             this._style.borderTopLeftRadius = value.value;
@@ -812,7 +812,7 @@ export default class CSSStyle {
     }
 
     set borderTopRightRadius(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderTopRightRadius = v)
             this._style.borderTopRightRadius = value.value;
@@ -826,7 +826,7 @@ export default class CSSStyle {
     }
     
     set borderTopStyle(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderTopStyle = v)
             this._style.borderTopStyle = value.value;
@@ -840,7 +840,7 @@ export default class CSSStyle {
     }
 
     set borderTopWidth(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderTopWidth = v)
             this._style.borderTopWidth = value.value;
@@ -854,7 +854,7 @@ export default class CSSStyle {
     }
 
     set borderWidth(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.borderWidth = v)
             this._style.borderWidth = value.value;
@@ -868,7 +868,7 @@ export default class CSSStyle {
     }
 
     set boxShadow(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.boxShadow = v)
             this._style.boxShadow = value.value;
@@ -882,7 +882,7 @@ export default class CSSStyle {
     }
 
     set boxSizing(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.boxSizing = v)
             this._style.boxSizing = value.value;
@@ -896,7 +896,7 @@ export default class CSSStyle {
     }
 
     set breakAfter(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.breakAfter = v)
             this._style.breakAfter = value.value;
@@ -910,7 +910,7 @@ export default class CSSStyle {
     }
 
     set breakBefore(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.breakBefore = v)
             this._style.breakBefore = value.value;
@@ -924,7 +924,7 @@ export default class CSSStyle {
     }
 
     set breakInside(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.breakInside = v)
             this._style.breakInside = value.value;
@@ -938,7 +938,7 @@ export default class CSSStyle {
     }
     
     set captionSide(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.captionSide = v)
             this._style.captionSide = value.value;
@@ -952,7 +952,7 @@ export default class CSSStyle {
     }
 
     set clear(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.clear = v)
             this._style.clear = value.value;
@@ -966,7 +966,7 @@ export default class CSSStyle {
     }
 
     set clip(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.clip = v)
             this._style.clip = value.value;
@@ -980,7 +980,7 @@ export default class CSSStyle {
     }
 
     set color(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.color = v)
             this._style.color = value.value;
@@ -994,7 +994,7 @@ export default class CSSStyle {
     }
 
     set columnCount(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.columnCount = v)
             this._style.columnCount = value.value;
@@ -1008,7 +1008,7 @@ export default class CSSStyle {
     }
 
     set columnFill(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.columnFill = v)
             this._style.columnFill = value.value;
@@ -1022,7 +1022,7 @@ export default class CSSStyle {
     }
 
     set columnGap(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.columnGap = v)
             this._style.columnGap = value.value;
@@ -1036,7 +1036,7 @@ export default class CSSStyle {
     }
 
     set columnRule(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.columnRule = v)
             this._style.columnRule = value.value;
@@ -1050,7 +1050,7 @@ export default class CSSStyle {
     }
 
     set columnRuleColor(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.columnRuleColor = v)
             this._style.columnRuleColor = value.value;
@@ -1064,7 +1064,7 @@ export default class CSSStyle {
     }
     
     set columnRuleStyle(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.columnRuleStyle = v)
             this._style.columnRuleStyle = value.value;
@@ -1078,7 +1078,7 @@ export default class CSSStyle {
     }
 
     set columnRuleWidth(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.columnRuleWidth = v)
             this._style.columnRuleWidth = value.value;
@@ -1092,7 +1092,7 @@ export default class CSSStyle {
     }
 
     set columnSpan(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.columnSpan = v)
             this._style.columnSpan = value.value;
@@ -1106,7 +1106,7 @@ export default class CSSStyle {
     }
 
     set columnWidth(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.columnWidth = v)
             this._style.columnWidth = value.value;
@@ -1120,7 +1120,7 @@ export default class CSSStyle {
     }
 
     set columns(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.columns = v)
             this._style.columns = value.value;
@@ -1134,7 +1134,7 @@ export default class CSSStyle {
     }
 
     set content(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.content = v)
             this._style.content = value.value;
@@ -1148,7 +1148,7 @@ export default class CSSStyle {
     }
 
     set counterIncrement(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.counterIncrement = v)
             this._style.counterIncrement = value.value;
@@ -1162,7 +1162,7 @@ export default class CSSStyle {
     }
 
     set counterReset(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.counterReset = v)
             this._style.counterReset = value.value;
@@ -1176,7 +1176,7 @@ export default class CSSStyle {
     }
 
     set cursor(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.cursor = v)
             this._style.cursor = value.value;
@@ -1190,7 +1190,7 @@ export default class CSSStyle {
     }
 
     set direction(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.direction = v)
             this._style.direction = value.value;
@@ -1204,7 +1204,7 @@ export default class CSSStyle {
     }
 
     set display(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.display = v)
             this._style.display = value.value;
@@ -1218,7 +1218,7 @@ export default class CSSStyle {
     }
 
     set emptyCells(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.emptyCells = v)
             this._style.emptyCells = value.value;
@@ -1232,7 +1232,7 @@ export default class CSSStyle {
     }
 
     set filter(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.filter = v)
             this._style.filter = value.value;
@@ -1246,7 +1246,7 @@ export default class CSSStyle {
     }
 
     set flex(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.flex = v)
             this._style.flex = value.value;
@@ -1260,7 +1260,7 @@ export default class CSSStyle {
     }
 
     set flexBasis(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.flexBasis = v)
             this._style.flexBasis = value.value;
@@ -1274,7 +1274,7 @@ export default class CSSStyle {
     }
 
     set flexDirection(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.flexDirection = v)
             this._style.flexDirection = value.value;
@@ -1288,7 +1288,7 @@ export default class CSSStyle {
     }
 
     set flexFlow(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.flexFlow = v)
             this._style.flexFlow = value.value;
@@ -1302,7 +1302,7 @@ export default class CSSStyle {
     }
 
     set flexGrow(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.flexGrow = v)
             this._style.flexGrow = value.value;
@@ -1316,7 +1316,7 @@ export default class CSSStyle {
     }
 
     set flexShrink(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.flexShrink = v)
             this._style.flexShrink = value.value;
@@ -1330,7 +1330,7 @@ export default class CSSStyle {
     }
 
     set flexWrap(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.flexWrap = v)
             this._style.flexWrap = value.value;
@@ -1344,7 +1344,7 @@ export default class CSSStyle {
     }
 
     set float(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.float = v)
             this._style.float = value.value;
@@ -1358,7 +1358,7 @@ export default class CSSStyle {
     }
 
     set font(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.font = v)
             this._style.font = value.value;
@@ -1372,7 +1372,7 @@ export default class CSSStyle {
     }
 
     set fontFamily(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontFamily = v)
             this._style.fontFamily = value.value;
@@ -1386,7 +1386,7 @@ export default class CSSStyle {
     }
 
     set fontFeatureSettings(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontFeatureSettings = v)
             this._style.fontFeatureSettings = value.value;
@@ -1400,7 +1400,7 @@ export default class CSSStyle {
     }
 
     set fontKerning(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontKerning = v)
             this._style.fontKerning = value.value;
@@ -1415,7 +1415,7 @@ export default class CSSStyle {
     }
 
     set fontStretch(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontStretch = v)
             this._style.fontStretch = value.value;
@@ -1429,7 +1429,7 @@ export default class CSSStyle {
     }
 
     set fontStyle(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontStyle = v)
             this._style.fontStyle = value.value;
@@ -1443,7 +1443,7 @@ export default class CSSStyle {
     }
 
     set fontVariant(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontVariant = v)
             this._style.fontVariant = value.value;
@@ -1457,7 +1457,7 @@ export default class CSSStyle {
     }
 
     set fontVariantCaps(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontVariantCaps = v)
             this._style.fontVariantCaps = value.value;
@@ -1471,7 +1471,7 @@ export default class CSSStyle {
     }
 
     set fontVariantEastAsian(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontVariantEastAsian = v)
             this._style.fontVariantEastAsian = value.value;
@@ -1485,7 +1485,7 @@ export default class CSSStyle {
     }
 
     set fontVariantLigatures(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontVariantLigatures = v)
             this._style.fontVariantLigatures = value.value;
@@ -1499,7 +1499,7 @@ export default class CSSStyle {
     }
 
     set fontVariantNumeric(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontVariantNumeric = v)
             this._style.fontVariantNumeric = value.value;
@@ -1513,7 +1513,7 @@ export default class CSSStyle {
     }
 
     set fontVariantPosition(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontVariantPosition = v)
             this._style.fontVariantPosition = value.value;
@@ -1527,7 +1527,7 @@ export default class CSSStyle {
     }
 
     set fontWeight(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.fontWeight = v)
             this._style.fontWeight = value.value;
@@ -1541,7 +1541,7 @@ export default class CSSStyle {
     }
 
     set gap(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gap = v)
             this._style.gap = value.value;
@@ -1555,7 +1555,7 @@ export default class CSSStyle {
     }
 
     set grid(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.grid = v)
             this._style.grid = value.value;
@@ -1569,7 +1569,7 @@ export default class CSSStyle {
     }
 
     set gridArea(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridArea = v)
             this._style.gridArea = value.value;
@@ -1583,7 +1583,7 @@ export default class CSSStyle {
     }
 
     set gridAutoColumns(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridAutoColumns = v)
             this._style.gridAutoColumns = value.value;
@@ -1597,7 +1597,7 @@ export default class CSSStyle {
     }
 
     set gridAutoFlow(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridAutoFlow = v)
             this._style.gridAutoFlow = value.value;
@@ -1611,7 +1611,7 @@ export default class CSSStyle {
     }
 
     set gridAutoRows(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridAutoRows = v)
             this._style.gridAutoRows = value.value;
@@ -1625,7 +1625,7 @@ export default class CSSStyle {
     }
 
     set gridColumn(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridColumn = v)
             this._style.gridColumn = value.value;
@@ -1639,7 +1639,7 @@ export default class CSSStyle {
     }
 
     set gridColumnEnd(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridColumnEnd = v)
             this._style.gridColumnEnd = value.value;
@@ -1653,7 +1653,7 @@ export default class CSSStyle {
     }
 
     set gridColumnGap(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridColumnGap = v)
             this._style.gridColumnGap = value.value;
@@ -1667,7 +1667,7 @@ export default class CSSStyle {
     }
 
     set gridColumnStart(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridColumnStart = v)
             this._style.gridColumnStart = value.value;
@@ -1685,7 +1685,7 @@ export default class CSSStyle {
     }
 
     set top(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.top = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1699,7 +1699,7 @@ export default class CSSStyle {
     }
 
     set right(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.right = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1713,7 +1713,7 @@ export default class CSSStyle {
     }
 
     set bottom(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.bottom = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1727,7 +1727,7 @@ export default class CSSStyle {
     }
 
     set left(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.left = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1741,7 +1741,7 @@ export default class CSSStyle {
     }
 
     set gridRow(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridRow = v)
             this._style.gridRow = value.value;
@@ -1755,7 +1755,7 @@ export default class CSSStyle {
     }
 
     set gridRowEnd(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridRowEnd = v)
             this._style.gridRowEnd = value.value;
@@ -1769,7 +1769,7 @@ export default class CSSStyle {
     }
 
     set gridRowGap(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridRowGap = v)
             this._style.gridRowGap = value.value;
@@ -1783,7 +1783,7 @@ export default class CSSStyle {
     }
 
     set gridRowStart(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridRowStart = v)
             this._style.gridRowStart = value.value;
@@ -1797,7 +1797,7 @@ export default class CSSStyle {
     }
 
     set gridTemplate(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.gridTemplate = v)
             this._style.gridTemplate = value.value;
@@ -1815,7 +1815,7 @@ export default class CSSStyle {
     }
 
     set width(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.width = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1829,7 +1829,7 @@ export default class CSSStyle {
     }
 
     set height(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.height = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1843,7 +1843,7 @@ export default class CSSStyle {
     }
 
     set minWidth(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.minWidth = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1857,7 +1857,7 @@ export default class CSSStyle {
     }
 
     set minHeight(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.minHeight = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1871,7 +1871,7 @@ export default class CSSStyle {
     }
 
     set maxWidth(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.maxWidth = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1885,7 +1885,7 @@ export default class CSSStyle {
     }
 
     set maxHeight(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.maxHeight = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1899,7 +1899,7 @@ export default class CSSStyle {
     }
 
     set margin(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.margin = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1913,7 +1913,7 @@ export default class CSSStyle {
     }
 
     set marginTop(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.marginTop = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1927,7 +1927,7 @@ export default class CSSStyle {
     }
 
     set marginRight(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.marginRight = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1941,7 +1941,7 @@ export default class CSSStyle {
     }
 
     set marginBottom(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.marginBottom = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1955,7 +1955,7 @@ export default class CSSStyle {
     }
 
     set marginLeft(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.marginLeft = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1969,7 +1969,7 @@ export default class CSSStyle {
     }
 
     set padding(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.padding = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1983,7 +1983,7 @@ export default class CSSStyle {
     }
 
     set paddingTop(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.paddingTop = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -1997,7 +1997,7 @@ export default class CSSStyle {
     }
 
     set paddingRight(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.paddingRight = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -2011,7 +2011,7 @@ export default class CSSStyle {
     }
 
     set paddingBottom(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.paddingBottom = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -2025,7 +2025,7 @@ export default class CSSStyle {
     }
 
     set paddingLeft(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.paddingLeft = typeof v === 'number' ? v + 'px' : v.toString())
             value.emit();
@@ -2039,7 +2039,7 @@ export default class CSSStyle {
     }
 
     set position(value: string | Ref<any>) {
-        if (typeof value === 'object') {
+        if (value instanceof Reference) {
             value = (value as Ref<any>)
             value.on((v) => this._style.position = v.toString())
             value.emit();

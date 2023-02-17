@@ -1,5 +1,3 @@
-
-import { Ref } from "../../factory/Ref";
 import Element from "../base/Element";
 
 export default class LabelElement extends Element {

@@ -46,6 +46,16 @@ class Router{
             this.loadPage(pathname.pathname, null)
     }
 
+    public setPage(pathname: string) {
+        const page = this.routes.get(pathname);
+        if (page != null)
+        {    
+            page.init();
+            const title = pathname.substring(pathname.indexOf('/') + 1, pathname.length)
+            window.document.title = page.title !=  undefined ? page.title : title != undefined ? title : "home"
+        }
+    }
+
 
 
     private pageNotFound(): void {

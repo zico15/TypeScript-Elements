@@ -14,7 +14,6 @@ export interface Ref<T> {
     toString(): string;
 }
 
-
 export class Reference<T> implements Ref<T>{
 
     private calllbacks: callback<T>[] = [];

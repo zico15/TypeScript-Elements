@@ -9,6 +9,10 @@
     ],
     "allowJs": true,
     "emitDeclarationOnly": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
     "declaration": true,
     "moduleResolution": "Node",
     "strict": true,
@@ -19,26 +23,11 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true, 
-    "forceConsistentCasingInFileNames": true,
     "baseUrl": "./src",
     "paths": {
-      "@components/*": [
-        "./components/*"
-      ],
-      "@pages/*": [
-        "./pages/*"
-      ],
-      "@constant/*": [
-        "./constant/*"
-      ],
-      "@store/*": [
-        "./store/*"
+      "@/*": [
+        "*"
       ]
     },
-  },
-  "include": [
-    "src"
-  ]
-}
+  }
+  }
